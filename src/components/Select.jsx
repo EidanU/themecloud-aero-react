@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 
-const Select = ({ register, airport }) => {
+const Select = ({ register, location }) => {
   const state = useSelector((state) => state.iniFlight.city);
 
   return (
-    <select {...register(airport, { required: true })}>
+    <select {...register(location, { required: true })}>
       {state.map((city) => (
         <option value={city} key={city}>
           {city}
