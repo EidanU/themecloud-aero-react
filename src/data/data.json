@@ -1,0 +1,29 @@
+{
+  "city": [
+    { "label": "Paris", "value": "paris" },
+    { "label": "London", "value": "London" },
+    { "label": "San Francisco", "value": "San Francisco" }
+  ],
+  "flight": [
+    {
+      "departure": "paris",
+      "landing": "London",
+      "hour": "07:30"
+    },
+    {
+      "departure": "London",
+      "landing": "San Fransico",
+      "hour": "12:30"
+    },
+    {
+      "departure": "San Fransico",
+      "landing": "London",
+      "hour": "13:35"
+    },
+    {
+      "departure": "London",
+      "landing": "Paris",
+      "hour": "19:45"
+    }
+  ]
+}
