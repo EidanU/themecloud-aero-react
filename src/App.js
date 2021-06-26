@@ -6,7 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import NotFound from "./components/NotFound";
+import NotFound from "./components/errors/NotFound";
 
 const App = () => {
   return (
