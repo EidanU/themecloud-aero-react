@@ -1,0 +1,41 @@
+{
+  "city": ["Paris", "London", "San Francisco"],
+  "flight": [
+    {
+      "departure": "Paris",
+      "arrival": "London",
+      "hours": {
+        "start": "07:30",
+        "end": "07:55"
+      },
+      "price": "120 €"
+    },
+    {
+      "departure": "London",
+      "arrival": "San Fransico",
+      "hours": {
+        "start": "12:20",
+        "end": "15:10"
+      },
+      "price": "390 €"
+    },
+    {
+      "departure": "San Fransico",
+      "arrival": "London",
+      "hours": {
+        "start": "13:35",
+        "end": "07:45"
+      },
+      "price": "390 €"
+    },
+    {
+      "departure": "London",
+      "arrival": "Paris",
+      "hours": {
+        "start": "19:45",
+        "end": "22:00"
+      },
+      "price": "390 €"
+    }
+  ]
+}
