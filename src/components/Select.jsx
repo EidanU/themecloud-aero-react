@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
+import * as data from "../data/data.json";
 
 const Select = ({ register, location }) => {
-  const state = useSelector((state) => state.iniFlight.city);
+  const state = data.default.city;
 
   return (
     <select {...register(location, { required: true })}>

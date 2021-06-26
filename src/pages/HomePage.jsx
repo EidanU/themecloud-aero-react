@@ -11,7 +11,9 @@ export default function App() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    history.push(`/flight/trip?from=${data.departure}&to=${data.arrival}`);
+    history.push(
+      `/flight/trip?from=${data.departure}&to=${data.arrival}&date=${data.date}`
+    );
   };
 
   return (
