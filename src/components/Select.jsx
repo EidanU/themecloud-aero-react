@@ -1,17 +1,16 @@
-import { useState } from "react";
-import Select from "@atlaskit/select";
 import { useSelector } from "react-redux";
 
-const SinglSelect = () => {
-  const city = useSelector((state) => state.iniFlight.city);
+const Select = ({ register, airport }) => {
+  const state = useSelector((state) => state.iniFlight.city);
+
   return (
-    <Select
-      className="single-select"
-      classNamePrefix="react-select"
-      options={city}
-      placeholder="Choose a City"
-    />
+    <select {...register(airport, { required: true })}>
+      {state.map((city) => (
+        <option value={city} key={city}>
+          {city}
+        </option>
+      ))}
+    </select>
   );
 };
-
-export default SinglSelect;
+export default Select;

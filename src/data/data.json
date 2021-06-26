@@ -1,9 +1,5 @@
 {
-  "city": [
-    { "label": "Paris", "value": "paris" },
-    { "label": "London", "value": "London" },
-    { "label": "San Francisco", "value": "San Francisco" }
-  ],
+  "city": ["Paris", "London", "San Francisco"],
   "flight": [
     {
       "departure": "paris",

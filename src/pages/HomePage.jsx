@@ -1,13 +1,24 @@
-import { actions } from "../redux/aeroSlice";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import SinglSelect from "../components/Select";
+import React from "react";
+import { useForm } from "react-hook-form";
+import Select from "../components/Select";
 
-const HomePage = () => {
+export default function App() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {};
+
   return (
-    <>
-      <SinglSelect />
-    </>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Select register={register} airport="departure" />
+      {errors.departure && <span>This field is required</span>}
+      <Select register={register} airport="arrival" />
+      {errors.arrival && <span>This field is required</span>}
+      <input type="date" {...register("date", { required: true })} />
+      {errors.date && <span>This field is required</span>}
+      <input type="submit" />
+    </form>
   );
-};
-export default HomePage;
+}
