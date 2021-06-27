@@ -4,6 +4,7 @@
     {
       "departure": "Paris",
       "arrival": "London",
+      "airport": "CDG to LHR",
       "hours": {
         "start": "07:30",
         "end": "07:55"
@@ -12,7 +13,8 @@
     },
     {
       "departure": "London",
-      "arrival": "San Fransico",
+      "arrival": "San Francisco",
+      "airport": "LHR to SFO",
       "hours": {
         "start": "12:20",
         "end": "15:10"
@@ -20,8 +22,9 @@
       "price": "390 €"
     },
     {
-      "departure": "San Fransico",
+      "departure": "San Francisco",
       "arrival": "London",
+      "airport": "SFO to LHR",
       "hours": {
         "start": "13:35",
         "end": "07:45"
@@ -31,6 +34,7 @@
     {
       "departure": "London",
       "arrival": "Paris",
+      "airport": "SFO to CDG",
       "hours": {
         "start": "19:45",
         "end": "22:00"
