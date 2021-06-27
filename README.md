@@ -2,7 +2,7 @@
 ## Stack
 
 - React
-  - UseForm
+  - useForm
   - React Rooter
 
 ## presentation
