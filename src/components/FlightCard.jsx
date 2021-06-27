@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
+//In this component I display every information about the flight
 const FlightCard = ({ data }) => {
-  console.log(data);
   return (
     <Container>
       <Content>
         <p>1 resultat</p>
-        <DataContainer>
+        <Card>
           <div>
-            <b>
-              {data.departure} to {data.arrival}
-            </b>
+            <b>{data.airport}</b>
           </div>
           <div>
             {data.date} {data.hours.start} - {data.date} {data.hours.end}
@@ -19,7 +17,7 @@ const FlightCard = ({ data }) => {
             <b>{data.price}</b>
           </div>
           <StyledButton>Reserver</StyledButton>
-        </DataContainer>
+        </Card>
       </Content>
     </Container>
   );
@@ -36,11 +34,10 @@ const Content = styled.div`
   margin: auto;
   padding: 3%;
   background: white;
-
   min-width: 10%;
   width: 20%;
 `;
-const DataContainer = styled.div`
+const Card = styled.div`
   padding: 3%;
   margin: auto;
   background: white;

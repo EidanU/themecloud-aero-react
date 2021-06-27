@@ -3,16 +3,18 @@ import { useForm } from "react-hook-form";
 import SelectInput from "../components/Select";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { useState } from "react";
-import * as data from "../data/data.json";
 
 export default function App() {
+  // The useHistory redirect to another url
   let history = useHistory();
+  // Here I import all function from the UseForm. I use useForm because it come with good error handling
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  //I decide to pass my data through the url because in this project it's the better way to keep the data through pages
   const onSubmit = (data) => {
     history.push(
       `/flight/trip?from=${data.departure}&to=${data.arrival}&date=${data.date}`
@@ -22,24 +24,24 @@ export default function App() {
   return (
     <Container>
       <StyledForm onSubmit={handleSubmit(onSubmit)}>
-        <label>Départ</label>
+        <label>Departure</label>
         <StyledSelect register={register} location="departure" />
-        {errors.departure && <span>This field is required</span>}
+        {errors.departure && <p>This field is required</p>}
 
-        <label>Arrivée</label>
+        <label>Landing</label>
         <StyledSelect register={register} location="arrival" />
-        {errors.arrival && <span>This field is required</span>}
+        {errors.arrival && <p>This field is required</p>}
 
-        <label>Date du voyage</label>
+        <label>Travel date</label>
         <StyledInput type="date" {...register("date", { required: true })} />
-        {errors.date && <span>This field is required</span>}
+        {errors.date && <p>This field is required</p>}
 
         <StyledInput type="submit" value="Rechercher" />
       </StyledForm>
     </Container>
   );
 }
-
+//Here I use styled component to stylize in the Javascript code
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -72,7 +74,3 @@ const StyledInput = styled.input`
   margin-bottom: 10%;
   height: 30px;
 `;
-
-//il faudrait un state pour la departure et un state ou l'arrivée un nom de ville dedans
-// lorsque l'on selectionne cela active une fonction qui modifie le state, et rajoute le nom de cette ville
-// lorsque dans le state departure on met paris, alors on filtre dans toute la data

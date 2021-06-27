@@ -1,10 +1,9 @@
 import HomePage from "./pages/HomePage";
-import OrderPage from "./pages/OrderPage";
+import FlightPage from "./pages/FlightPage";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import NotFound from "./components/errors/NotFound";
 
@@ -16,8 +15,8 @@ const App = () => {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route exact path="/flight/:from">
-            <OrderPage />
+          <Route exact path="/flight/:trip">
+            <FlightPage />
           </Route>
           <Route component={NotFound} />
         </Switch>

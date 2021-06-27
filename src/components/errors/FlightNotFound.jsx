@@ -1,8 +1,10 @@
 import styled from "styled-components";
+
+//Here is the page for flight not found, the different with the 404 is that she will be displays only with the url /flight/trip
 const FlightNotFound = () => {
   return (
     <Container>
-      <Title>Aucun vols trouvés</Title>
+      <Title>Sorry, we didn't find any flight</Title>
     </Container>
   );
 };
