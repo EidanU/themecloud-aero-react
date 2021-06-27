@@ -36,7 +36,7 @@ export default function App() {
         <StyledInput type="date" {...register("date", { required: true })} />
         {errors.date && <p>This field is required</p>}
 
-        <StyledInput type="submit" value="Rechercher" />
+        <StyledInput type="submit" value="Reserve" />
       </StyledForm>
     </Container>
   );
